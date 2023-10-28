@@ -1,6 +1,10 @@
+from config import config
 def main():
-    pass
-
+    params = config()
+    conn = None
+    user_interaction(params)
+    database_interation()
+    user_inter_with_class_DBManager(params)
 
 if __name__ == '__main__':
     main()
