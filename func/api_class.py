@@ -2,7 +2,7 @@ import requests
 import json
 
 
-class Api_requests_about_employers_and_vacancies:
+class Api_requests:
 
     def __init__(self):
         self.__name = {}
@@ -21,7 +21,7 @@ class Api_requests_about_employers_and_vacancies:
         }
 
         response = requests.get(f'https://api.hh.ru/employers', params).json()
-        with open(f'../src/employers_and_vacancies.json', 'w', encoding='utf-8') as file:
+        with open(f'employers_and_vacancies.json', 'w', encoding='utf-8') as file:
             json.dump(response, file, indent=4, ensure_ascii=False)
 
             self.__name = {item['name']: item['id'] for item in response['items']}
@@ -35,5 +35,5 @@ class Api_requests_about_employers_and_vacancies:
                 'pages': i
             }
             response = requests.get(f'https://api.hh.ru/vacancies?employer_id={data}', params=params).json()
-            with open(f'../src/vacancies_of_company.json', 'w', encoding='utf-8') as file:
+            with open(f'vacancies_of_company.json', 'w', encoding='utf-8') as file:
                 json.dump(response, file, indent=4, ensure_ascii=False)

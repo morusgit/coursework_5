@@ -25,7 +25,7 @@ def execute_sql_script(cur, script_file) -> None:
 def read_json_file_vacancy() -> list:
     """чтение файла json для заполнения таблицы vacancy_table"""
 
-    with open(f'../src/vacancies_of_company.json', 'r', encoding='utf-8') as file:
+    with open(f'vacancies_of_company.json', 'r', encoding='utf-8') as file:
         data = json.load(file)
         list_vacancy_for_bd = []
         for vacancy in data['items']:
@@ -52,7 +52,7 @@ def read_json_file_vacancy() -> list:
 def read_json_file_employers() -> list:
     """чтение файла json для заполнения таблицы employee_table"""
 
-    with open(f'../src/employers_and_vacancies.json', 'r', encoding='UTF-8') as file:
+    with open(f'employers_and_vacancies.json', 'r', encoding='UTF-8') as file:
         data = json.load(file)
 
         list_employee_for_bd = [(i["id"], i["name"], i["alternate_url"], i["open_vacancies"]) for i in data['items']]
