@@ -6,7 +6,7 @@ from func.db_functions import insert_data_in_vacancy_table, insert_data_in_emplo
 import psycopg2
 
 
-def database_interaсtion() -> None:
+def database_interaction() -> None:
     """взаимодействия с БД: создание БД, таблиц, заполнение таблиц данными из json файлов"""
 
     db_name = 'vacancy_db'
@@ -89,3 +89,4 @@ def user_inter_with_class_DBManager(params):
             user_number += 1
         else:
             print("В выборке нет данного номера, либо указали нечисловое значение")
+
