@@ -1,4 +1,4 @@
-from func.user_and_db_inter_functions import user_interaction, database_interaction, user_inter_with_class_DBManager
+from utils.user_and_db_inter_functions import user_interaction, database_interaction, user_inter_with_class_DBManager
 from config import config
 def main():
     params = config()

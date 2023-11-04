@@ -1,8 +1,8 @@
-from func.api_class import Api_requests
-from func.db_inter_class import DBManager
-from config import config
-from func.db_functions import create_database, execute_sql_script, read_json_file_employers, read_json_file_vacancy
-from func.db_functions import insert_data_in_vacancy_table, insert_data_in_employee_table
+from utils.api_class import Api_requests
+from utils.db_inter_class import DBManager
+from src.config import config
+from utils.db_functions import create_database, execute_sql_script, read_json_file_employers, read_json_file_vacancy
+from utils.db_functions import insert_data_in_vacancy_table, insert_data_in_employee_table
 import psycopg2
 
 
