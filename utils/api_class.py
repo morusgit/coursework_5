@@ -1,8 +1,9 @@
-import requests
 import json
 
+import requests
 
-class Api_requests:
+
+class ApiRequests:
 
     def __init__(self):
         self.__name = {}

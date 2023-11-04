@@ -1,9 +1,10 @@
-from utils.api_class import Api_requests
-from utils.db_inter_class import DBManager
-from src.config import config
+import psycopg2
+from utils.api_class import ApiRequests
 from utils.db_functions import create_database, execute_sql_script, read_json_file_employers, read_json_file_vacancy
 from utils.db_functions import insert_data_in_vacancy_table, insert_data_in_employee_table
-import psycopg2
+from utils.db_inter_class import DBManager
+
+from config import config
 
 
 def database_interaction() -> None:
@@ -40,7 +41,7 @@ def database_interaction() -> None:
 def user_interaction(params):
     """Взаимодействие с пользователем и создание vacancy-table таблицы с указанием ID компании """
 
-    class_api_exemp = Api_requests()
+    class_api_exemp = ApiRequests()
     class_api_exemp.get_employers_of_choice_company()
 
     data = class_api_exemp.name
@@ -59,8 +60,6 @@ def user_interaction(params):
 def user_inter_with_class_DBManager(params):
     db_class_exemp = DBManager()
 
-    #user_number = 0
-    #while user_number < 5:
     while True:
         print('\n'
               'Выбери из списка какие данные ты бы хотел получить, укажи цифру:\n'

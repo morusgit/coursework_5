@@ -1,5 +1,6 @@
-import psycopg2
 import json
+
+import psycopg2
 
 
 def create_database(database_name: str, params: dict) -> None:
