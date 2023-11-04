@@ -1,8 +1,8 @@
 import psycopg2
-from utils.api_class import ApiRequests
-from utils.db_functions import create_database, execute_sql_script, read_json_file_employers, read_json_file_vacancy
-from utils.db_functions import insert_data_in_vacancy_table, insert_data_in_employee_table
-from utils.db_inter_class import DBManager
+from project_utils.api_class import ApiRequests
+from project_utils.db_functions import create_database, execute_sql_script, read_json_file_employers, read_json_file_vacancy
+from project_utils.db_functions import insert_data_in_vacancy_table, insert_data_in_employee_table
+from project_utils.db_inter_class import DBManager
 
 from config import config
 
